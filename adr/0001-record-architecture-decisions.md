@@ -65,4 +65,10 @@ List any relevant ADRs, such as a design decision for a sub-component of a featu
 
 List additional references.
 
+<<<<<<< HEAD
 - **Title**
+=======
+Format:
+
+[Title](URL)
+>>>>>>> 49168201c9c22b2ce52ff5b6a84f83f6c5ec1a8a
