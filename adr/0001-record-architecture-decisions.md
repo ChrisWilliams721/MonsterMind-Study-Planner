@@ -1,4 +1,4 @@
-#Architecture Decision Record (ADR) template
+Architecture Decision Record (ADR) template
 This is a template for EdgeX Foundry ADR.
 
 Submitters
