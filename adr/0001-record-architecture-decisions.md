@@ -2,18 +2,12 @@
 
 ## Submitters
 
-- Name (Organization)
+- Reanna Bari
+- Aisha Naeem
+- Christopher Williams
 
-## Change Log
-
-| State          | Date       | PR                                                                 |
-|----------------|------------|---------------------------------------------------------------------|
-| [Status of ADR](URL of pull request) | YYYY-MM-DD | [Pull Request Title](URL) |
-
-## Referenced Use Case(s)
-
-- **Use Case Name**  
-  Add explanations if the ADR is not addressing all the requirements of a use case.
+* Status: [Proposed]
+* Date: 2024-11-02
 
 ## Context
 
@@ -50,25 +44,11 @@ Document:
 - Indicate if/how they were resolved or mollified.
 
 ## Decision
-
-Document any agreed-upon important implementation details, caveats, future considerations, remaining or deferred design issues.
-
-Document any part of the requirements not satisfied by the proposed design.
+- Document any agreed-upon important implementation detail, caveats, future considerations, and remaining or deferred design issues.
+- Mention any parts of the requirements not satisfied by the proposed design.
 
 ## Other Related ADRs
-
-List any relevant ADRs, such as a design decision for a sub-component of a feature, a design deprecated as a result of this design, etc.
-
-- **ADR Title** - Relevance
+- ADR Title - Relevance
 
 ## References
-
-List additional references.
-
-<<<<<<< HEAD
-- **Title**
-=======
-Format:
-
-[Title](URL)
->>>>>>> 49168201c9c22b2ce52ff5b6a84f83f6c5ec1a8a
+- [Title of Document or Article](URL)
