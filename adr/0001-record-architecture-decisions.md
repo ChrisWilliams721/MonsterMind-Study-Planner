@@ -1,77 +1,68 @@
-Architecture Decision Record (ADR) template
-This is a template for EdgeX Foundry ADR.
+# Architecture Decision Record (ADR)
 
-Submitters
-List ADR submitters.
+## Submitters
 
-Format:
+- Name (Organization)
 
-Name (Organization)
-Change Log
-List the changes to the document, incl. state, date, and PR URL.
+## Change Log
 
-State is one of: pending, approved, amended, deprecated.
+| State          | Date       | PR                                                                 |
+|----------------|------------|---------------------------------------------------------------------|
+| [Status of ADR](URL of pull request) | YYYY-MM-DD | [Pull Request Title](URL) |
 
-Date is an ISO 8601 (YYYY-MM-DD) string.
+## Referenced Use Case(s)
 
-PR is the pull request that submitted the change, including information such as the diff, contributors, and reviewers.
+- **Use Case Name**  
+  Add explanations if the ADR is not addressing all the requirements of a use case.
 
-Format:
+## Context
 
-[Status of ADR e.g. approved, amended, etc.](URL of pull request) YYYY-MM-DD
-Referenced Use Case(s)
-List all relevant use case / requirements documents.
-
-ADR requires at least one relevant, approved use case.
-
-Format:
-
-[Use Case Name](URL)
-Add explanations if the ADR is not addressing all the requirements of a use case.
-
-Context
 Describe:
+- How the design is architecturally significant—warranting an ADR (versus a simple issue and PR to fix a problem).
+- The high-level design approach (details described in the proposed design below).
 
-how the design is architecturally significant - warranting an ADR (versus simple issue and PR to fix a problem)
+## Proposed Design
 
-the high level design approach (details described in the proposed design below)
+Details of the design (without getting into implementation where possible):
 
-Proposed Design
-Details of the design (without getting into implementation where possible).
+- **Services/Modules to be Impacted:**  
+  List of impacted services/modules.
 
-Outline:
+- **New Services/Modules to be Added:**  
+  List of new services/modules.
 
-services/modules to be impacted (changed)
+- **Model and DTO Impact:**  
+  Describe any changes/additions/removals.
 
-new services/modules to be added
+- **API Impact:**  
+  Describe any changes/additions/removals.
 
-model and DTO impact (changes/additions/removals)
+- **General Configuration Impact:**  
+  Describe any establishment of new sections, changes/additions/removals.
 
-API impact (changes/additions/removals)
+- **DevOps Impact:**  
+  Outline any relevant impacts on DevOps processes or tools.
 
-general configuration impact (establishment of new sections, changes/additions/removals)
+## Considerations
 
-devops impact
+Document:
+- Alternatives, concerns, ancillary or related issues, and questions that arose in the debate of the ADR.
+- Indicate if/how they were resolved or mollified.
 
-Considerations
-Document alternatives, concerns, ancillary or related issues, questions that arose in debate of the ADR.
+## Decision
 
-Indicate if/how they were resolved or mollified.
-
-Decision
-Document any agreed upon important implementation detail, caveats, future considerations, remaining or deferred design issues.
+Document any agreed-upon important implementation details, caveats, future considerations, remaining or deferred design issues.
 
 Document any part of the requirements not satisfied by the proposed design.
 
-Other Related ADRs
-List any relevant ADRs - such as a design decision for a sub-component of a feature, a design deprecated as a result of this design, etc..
+## Other Related ADRs
 
-Format:
+List any relevant ADRs, such as a design decision for a sub-component of a feature, a design deprecated as a result of this design, etc.
 
-[ADR Title](URL) - Relevance
-References
+- **ADR Title** - Relevance
+
+## References
+
 List additional references.
 
-Format:
-
-[Title](URL)
+- **Title**
