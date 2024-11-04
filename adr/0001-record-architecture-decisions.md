@@ -12,23 +12,20 @@ MonsterMind is a study planner application created by software development stude
 
 Details of the design (without getting into implementation where possible):
 
-- **Services/Modules to be Impacted:**  
-  List of impacted services/modules.
+1. Frontend: React Native to enable cross-platform development while using a single code base, using react native also makes everything more flexible if this application were to also be made for iOS 
+2. CSS Framework: Bootstrap will be used for the styling process
+3. Core Features
+- **Task management:**  
+  Students will able to add, edit, and remove tasks or assignments from their to-do list.
+- **Calendar view:**  
+  The application will have a calendar where they can see what days they have certain tasks due as well as due dates 
+  organized by colour which will help with visualization in terms of their workload
+- **Note Taking:**  
+  Students will be able to take down notes of class material and important information on the app where their listed   
+  courses are to help with their understanding as well as retention
+4.Standards: Because we are beginners creating this app, the code should follow practices best suited for simplicity, readability, and maintainability, to ensure clarity
 
-- **New Services/Modules to be Added:**  
-  List of new services/modules.
-
-- **Model and DTO Impact:**  
-  Describe any changes/additions/removals.
-
-- **API Impact:**  
-  Describe any changes/additions/removals.
-
-- **General Configuration Impact:**  
-  Describe any establishment of new sections, changes/additions/removals.
-
-- **DevOps Impact:**  
-  Outline any relevant impacts on DevOps processes or tools.
+ 
 
 ## Considerations
 
