@@ -1,21 +1,14 @@
-# Architecture Decision Record (ADR)
+# Architecture Decision Record for MonsterMind
 
-## Submitters
-
-- Reanna Bari
-- Aisha Naeem
-- Christopher Williams
+## Status 
 
 * Status: [Proposed]
 * Date: 2024-11-02
 
 ## Context
+MonsterMind is a study planner application created by software development students using React Native. The purpose of this application is for students to easily be able to keep track of all their academic tasks, tracking assignments, as well as viewing their schedule on a calendar. The target devices for this application are Android phones, and this app will have a simple as well as beginner-friendly coding structure, consisting of about 4-5 screens and focusing on user experience.
 
-Describe:
-- How the design is architecturally significant—warranting an ADR (versus a simple issue and PR to fix a problem).
-- The high-level design approach (details described in the proposed design below).
-
-## Proposed Design
+## Decision
 
 Details of the design (without getting into implementation where possible):
 
