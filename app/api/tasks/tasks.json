@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Project Meeting",
+    "date": 12,
+    "month": "March",
+    "status": "Pending",
+    "time": "2:00 PM",
+    "joiningPeople": ["John", "Sarah", "Michael"]
+  },
+  {
+    "title": "Team Lunch",
+    "date": 15,
+    "month": "March",
+    "status": "Done",
+    "time": "12:30 PM",
+    "joiningPeople": ["Emily", "David", "Rachel"]
+  },
+  {
+    "title": "Client Call",
+    "date": 20,
+    "month": "March",
+    "status": "To do",
+    "time": "10:00 AM",
+    "joiningPeople": ["James", "Laura", "Chris"]
+  }
+]
