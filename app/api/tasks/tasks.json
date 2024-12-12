@@ -22,5 +22,13 @@
     "status": "To do",
     "time": "10:00 AM",
     "joiningPeople": ["James", "Laura", "Chris"]
+  },
+  {
+    "title": "Client Call",
+    "date": 21,
+    "month": "March",
+    "status": "To do",
+    "time": "10:00 AM",
+    "joiningPeople": ["James", "Laura", "Chris"]
   }
 ]

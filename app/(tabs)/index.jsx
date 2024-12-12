@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  FlatList,
+} from "react-native";
 import taskData from "../api/tasks/tasks.json";
-
+import habitData from "../api/tasks/habits.json";
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +50,6 @@ const styles = StyleSheet.create({
     left: 30,
   },
   tasksContainer: {
-    marginTop: 450,
     marginHorizontal: 20,
     backgroundColor: "rgba(0, 0, 0, 0.6)",
     borderRadius: 10,
@@ -60,14 +67,57 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#ccc",
   },
+    // Existing styles...
+  
+    habitsList: {
+      marginTop: 150, // Adjust this value to position habits correctly
+      paddingHorizontal: 20,
+      paddingBottom: 50,
+    },
+    habitCard: {
+      backgroundColor: "#f0f8ff", // Light blue background
+      borderRadius: 15,
+      padding: 15,
+      marginRight: 10,
+      width: 120, // Fixed width for each card
+      alignItems: "center",
+      elevation: 5, // Shadow effect for Android
+      shadowColor: "#000", // Shadow effect for iOS
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.2,
+      shadowRadius: 3,
+    },
+    habitIcon: {
+      width: 50,
+      height: 50,
+      marginBottom: 10,
+    },
+    habitTitle: {
+      fontSize: 16,
+      fontWeight: "bold",
+      color: "#333",
+      marginBottom: 5,
+      textAlign: "center",
+    },
+    habitCount: {
+      fontSize: 14,
+      color: "#666",
+      textAlign: "center",
+    },
 });
 
 const Home = () => {
   const [tasks, setTasks] = useState([]);
+  const [habits, setHabits] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setTasks(taskData);
+    try {
+      setTasks(taskData.slice(0, 3)); // Display only the first 3 tasks
+      setHabits(habitData.slice(0, 2)); // Display only the first 2 habits
+    } catch (err) {
+      setError("Failed to load data.");
+    }
   }, []);
 
   const renderTask = ({ item }) => (
@@ -82,6 +132,25 @@ const Home = () => {
       </Text>
     </View>
   );
+
+  const renderHabit = ({ item }) => {
+    const habitIcons = {
+      "Drink Water": require("../../assets/images/water.png"),
+      "Eat Fruits": require("../../assets/images/fruit.png"),
+    };
+
+    return (
+      <View style={styles.habitCard}>
+        <Image
+          source={habitIcons[item.title]} // Dynamically load icons
+          style={styles.habitIcon}
+          resizeMode="contain"
+        />
+        <Text style={styles.habitTitle}>{item.title}</Text>
+        <Text style={styles.habitCount}>{item.count} </Text>
+      </View>
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -106,9 +175,21 @@ const Home = () => {
 
         <Text style={styles.headerText}>Good Morning,</Text>
         <Text style={styles.subHeaderText}>Habits</Text>
+        <View>
+          <View style={styles.habitsList}>
+            <FlatList
+              data={habits}
+              renderItem={renderHabit}
+              keyExtractor={(item, index) => index.toString()}
+              horizontal // Enables horizontal scrolling
+              showsHorizontalScrollIndicator={false}
+            />
+          </View>
+        </View>
 
-        {error && <Text style={{ color: 'red', marginLeft: 30 }}>{error}</Text>}
+        {error && <Text style={{ color: "red", marginLeft: 30 }}>{error}</Text>}
 
+        {/* Tasks Section */}
         <View style={styles.tasksContainer}>
           <FlatList
             data={tasks}
@@ -117,7 +198,10 @@ const Home = () => {
           />
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => console.log("See all tasks pressed")}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => console.log("See all tasks pressed")}
+        >
           <Text style={{ color: "#3b3b3b" }}>See all</Text>
         </TouchableOpacity>
       </ImageBackground>
