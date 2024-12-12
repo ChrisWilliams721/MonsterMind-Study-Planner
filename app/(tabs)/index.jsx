@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import taskData from "../api/tasks/tasks.json";
 import habitData from "../api/tasks/habits.json";
+import { useExpoRouter } from "expo-router/build/global-state/router-store";
+
 
 const styles = StyleSheet.create({
   container: {
@@ -20,6 +22,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     height: "100%",
+  },
+  avatar: {
+    width: 45,
+    height: 45,
+    borderRadius: 50,
+    position: "absolute",
+    right: 30,
+     
   },
   button: {
     position: "absolute",
@@ -110,6 +120,7 @@ const Home = () => {
   const [tasks, setTasks] = useState([]);
   const [habits, setHabits] = useState([]);
   const [error, setError] = useState(null);
+  const router = useExpoRouter();
 
   useEffect(() => {
     try {
@@ -162,17 +173,9 @@ const Home = () => {
         <TouchableOpacity>
           <Image
             source={require("../../assets/images/user.png")}
-            accessibilityLabel="User profile icon"
-            style={{
-              position: "absolute",
-              width: 45,
-              height: 45,
-              bottom: 340,
-              right: 20,
-            }}
+            style={styles.avatar}
           />
         </TouchableOpacity>
-
         <Text style={styles.headerText}>Good Morning,</Text>
         <Text style={styles.subHeaderText}>Habits</Text>
         <View>
@@ -200,7 +203,7 @@ const Home = () => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => console.log("See all tasks pressed")}
+          onPress={() => {router.push("/(tabs)/calender")}}
         >
           <Text style={{ color: "#3b3b3b" }}>See all</Text>
         </TouchableOpacity>
