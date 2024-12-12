@@ -8,6 +8,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
+          headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
         }}
       />
@@ -15,6 +16,7 @@ export default function TabLayout() {
         name="calender"
         options={{
           title: 'Calender',
+          headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="calendar" color={color} />,
         }}
       />
@@ -22,6 +24,7 @@ export default function TabLayout() {
         name="habittracker"
         options={{
           title: 'habit',
+          headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="check" color={color} />,
         }}
       />
@@ -29,6 +32,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: 'Profile',
+          headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />,
         }}
       />
