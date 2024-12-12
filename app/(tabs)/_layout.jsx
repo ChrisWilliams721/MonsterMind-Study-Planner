@@ -23,8 +23,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="habittracker"
         options={{
-          title: 'habit',
-          headerShown: false,
+          title: 'Habit',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="check" color={color} />,
         }}
       />
