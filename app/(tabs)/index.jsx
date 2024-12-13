@@ -7,11 +7,11 @@ import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
+  Pressable,
 } from "react-native";
 import taskData from "../api/tasks/tasks.json";
 import habitData from "../api/tasks/habits.json";
 import { useExpoRouter } from "expo-router/build/global-state/router-store";
-
 
 const styles = StyleSheet.create({
   container: {
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     position: "absolute",
     right: 30,
-     
   },
   button: {
     position: "absolute",
@@ -77,43 +76,43 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#ccc",
   },
-    // Existing styles...
-  
-    habitsList: {
-      marginTop: 150, // Adjust this value to position habits correctly
-      paddingHorizontal: 20,
-      paddingBottom: 50,
-    },
-    habitCard: {
-      backgroundColor: "#f0f8ff", // Light blue background
-      borderRadius: 15,
-      padding: 15,
-      marginRight: 10,
-      width: 120, // Fixed width for each card
-      alignItems: "center",
-      elevation: 5, // Shadow effect for Android
-      shadowColor: "#000", // Shadow effect for iOS
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.2,
-      shadowRadius: 3,
-    },
-    habitIcon: {
-      width: 50,
-      height: 50,
-      marginBottom: 10,
-    },
-    habitTitle: {
-      fontSize: 16,
-      fontWeight: "bold",
-      color: "#333",
-      marginBottom: 5,
-      textAlign: "center",
-    },
-    habitCount: {
-      fontSize: 14,
-      color: "#666",
-      textAlign: "center",
-    },
+  // Existing styles...
+
+  habitsList: {
+    marginTop: 150, // Adjust this value to position habits correctly
+    paddingHorizontal: 20,
+    paddingBottom: 50,
+  },
+  habitCard: {
+    backgroundColor: "#f0f8ff", // Light blue background
+    borderRadius: 15,
+    padding: 15,
+    marginRight: 10,
+    width: 120, // Fixed width for each card
+    alignItems: "center",
+    elevation: 5, // Shadow effect for Android
+    shadowColor: "#000", // Shadow effect for iOS
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+  habitIcon: {
+    width: 50,
+    height: 50,
+    marginBottom: 10,
+  },
+  habitTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#333",
+    marginBottom: 5,
+    textAlign: "center",
+  },
+  habitCount: {
+    fontSize: 14,
+    color: "#666",
+    textAlign: "center",
+  },
 });
 
 const Home = () => {
@@ -174,6 +173,9 @@ const Home = () => {
           <Image
             source={require("../../assets/images/user.png")}
             style={styles.avatar}
+            onPress={() => {
+              router.push("/(tabs)/profile");
+            }}
           />
         </TouchableOpacity>
         <Text style={styles.headerText}>Good Morning,</Text>
@@ -203,7 +205,9 @@ const Home = () => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => {router.push("/(tabs)/calender")}}
+          onPress={() => {
+            router.push("/(tabs)/calender");
+          }}
         >
           <Text style={{ color: "#3b3b3b" }}>See all</Text>
         </TouchableOpacity>
