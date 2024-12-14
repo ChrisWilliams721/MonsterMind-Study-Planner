@@ -19,7 +19,22 @@ const CalendarPage = () => {
           [selectedDate]: {
             selected: true,
             selectedColor: '#4caf50',
-
+          },
+        }}
+        theme={{
+          selectedDayBackgroundColor: '#4caf50',
+          todayTextColor: '#ff5722',
+          arrowColor: '#4caf50',
+        }}
+      />
+      <View style={styles.selectedDateContainer}>
+        {selectedDate ? (
+          <Text style={styles.selectedDateText}>Selected Date: {selectedDate}</Text>
+        ) : (
+          <Text style={styles.selectedDateText}>No Date Selected</Text>
+        )}
+      </View>
+    </View>
   );
 };
 
@@ -50,3 +65,4 @@ const styles = StyleSheet.create({
 });
 
 export default CalendarPage;
+
